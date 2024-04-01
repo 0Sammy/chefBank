@@ -1,4 +1,6 @@
 import { getUserDetails } from "@/providers/userDetails";
+import { permanentRedirect } from "next/navigation";
+
 
 //Import Needed Components
 import Header from "@/components/DashboardComponents/Header";
@@ -10,6 +12,7 @@ import PaymentDetails from "@/components/TransferComponents/PaymentDetails";
 import BalanceUpdate from "@/components/DashboardComponents/BalanceUpdate";
 
 
+
 export const revalidate = 30
 const page = async () => {
 
@@ -17,6 +20,10 @@ const page = async () => {
     const transactions = user?.transactions
     const lastFiveTransactions = transactions?.slice(-5);
     const currentCurrency = user?.currency 
+
+    if (user?.isSuspended){
+        permanentRedirect('/suspend') 
+     }
     //console.log({transactions})
     
     return ( 

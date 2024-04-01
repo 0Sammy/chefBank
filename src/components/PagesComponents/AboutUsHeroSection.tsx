@@ -20,8 +20,8 @@ const AboutUsHeroSection = () => {
                 </div>
             </div>
             <div className="md:w-[49%] flex flex-col items-center gap-y-10">
-                <p className="text-[#020100] font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl w-[95%] md:w-[80%] lg:w-[70%] xl:w-[65%]">What is <span className="text-primary"> Capital Sphere Bank</span></p>
-                    <p className="text-[#48484A] text-xs md:text-sm xl:text-base w-[95%] md:w-[80%] lg:w-[70%] xl:w-[65%]">At Capital Sphere, we believe in redefining the banking experience by putting our customers first. With a commitment to innovation, integrity, and personalized service, we strive to empower individuals and businesses to achieve their financial goals.</p>
+                <p className="text-[#020100] font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl w-[95%] md:w-[80%] lg:w-[70%] xl:w-[65%]">What is <span className="text-primary"> Keystone National Bank</span></p>
+                    <p className="text-[#48484A] text-xs md:text-sm xl:text-base w-[95%] md:w-[80%] lg:w-[70%] xl:w-[65%]">At Keystone National Bank, we believe in redefining the banking experience by putting our customers first. With a commitment to innovation, integrity, and personalized service, we strive to empower individuals and businesses to achieve their financial goals.</p>
             </div>
         </main>
      );

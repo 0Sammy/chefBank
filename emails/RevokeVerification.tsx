@@ -15,13 +15,13 @@ export default function RevokeTemplate({ userName }: EmailProps) {
         <Container style={container}>
           <Container>
             <img
-              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1706006755/logo_bxjctk.png"
-              alt="Capital Sphere Logo"
+              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
+              alt="Keystone National Bank Logo"
             />
           </Container>
           <Text style={bold}>Dear {userName}!</Text>
           <Text style={paragraph}>
-            This message is to notify you that Capital Sphere Bank has revoked
+            This message is to notify you that Keystone National Bank has revoked
             the verified status on your account.
           </Text>
           <Text style={paragraph}>
@@ -36,7 +36,7 @@ export default function RevokeTemplate({ userName }: EmailProps) {
             accordingly. This process can take 5-7 business days.
           </Text>
           <Container style={footer}>
-            <Text>Processed by Capital Sphere Bank for {userName}</Text>
+            <Text>Processed by Keystone National Bank for {userName}</Text>
           </Container>
         </Container>
       </Section>

@@ -19,8 +19,8 @@ export default function SuspendTemplate({
         <Container style={container}>
           <Container>
             <img
-              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1706006755/logo_bxjctk.png"
-              alt="Capital Sphere Logo"
+              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
+              alt="Keystone National Bank Logo"
             />
           </Container>
           <Text style={bold}>Dear {userName}!</Text>
@@ -46,7 +46,7 @@ export default function SuspendTemplate({
           </Text>
           <Container style={footer}>
             <Text>
-              Processed by Capital Sphere Bank Fraud Investigation Team for{" "}
+              Processed by Keystone National Bank Fraud Investigation Team for{" "}
               {userName}
             </Text>
           </Container>

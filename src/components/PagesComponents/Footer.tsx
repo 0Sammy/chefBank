@@ -39,7 +39,7 @@ const Footer = () => {
     return ( 
         <main className="mt-20 bg-[#020100] rounded-tl-[2rem] rounded-tr-[2rem] py-8 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="flex flex-col gap-y-3 sm:gap-y-0 sm:flex-row sm:items-center sm:justify-between">
-                <Image src={logo} alt="Capital Sphere Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/>
+                <Image src={logo} alt="Keystone National Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/>
                 <form onSubmit={onSubmit} className="flex flex-col gap-y-2 sm:flex-row sm:gap-x-3 text-xs md:text-sm xl:text-base">
                     <input
                         required
@@ -71,16 +71,16 @@ const Footer = () => {
                 <div className="flex flex-col gap-y-5 mt-6 sm:w-[49%]">
                     <div className="flex gap-x-1">
                         <LocationTick size="20" color="#FF8A65" className="shrink-0"/>
-                       <p>22 Archbishop Makarios III, Makaria Center, 5th Floor, Office 501, Larnaca, Cyprus, 6017.</p> 
+                       <p>3311 Azolla At Orlando, FL, 32808.</p> 
                     </div>
                     <div className="flex gap-x-1">
                         <MessageTick size="20" color="#FF8A65" className="shrink-0"/>
-                       <p>Hello@cspherebank.com</p> 
+                       <p>Hello@Keystonenationalbank.com</p> 
                     </div>
                     
                 </div>
             </div>
-            <p className="text-xs md:text-sm xl:text-base text-white mt-6">Copyright &copy; 2024 Capital Sphere Bank. All rights reserved</p>
+            <p className="text-xs md:text-sm xl:text-base text-white mt-6">Copyright &copy; 2024 Keystone National Bank. All rights reserved</p>
         </main>
      );
 }

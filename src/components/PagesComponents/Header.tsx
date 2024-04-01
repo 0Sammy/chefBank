@@ -27,7 +27,7 @@ const Header = () => {
         <main>
             <div className="py-8 flex justify-between items-center text-[#F2F2F7] font-medium text-xs sm:text-sm xl:text-base">
                 <div className="flex gap-x-5 lg:gap-x-10 items-center">
-                    <Link href="/"><Image src={logo} alt="Capital Sphere Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/></Link>
+                    <Link href="/"><Image src={logo} alt="Keystone National Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/></Link>
 
                     <Link href="/features" className={`${pathName === "/features" ? "text-primary font-bold" : ""} hidden md:block hover:text-primary duration-500`} prefetch={true}>Features</Link>
                     <Link href="/aboutus" className={`${pathName === "/aboutus" ? "text-primary font-bold" : ""} hidden md:block hover:text-primary duration-500`} prefetch={true}>About us</Link>

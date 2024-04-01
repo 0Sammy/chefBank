@@ -1,13 +1,20 @@
 import { getUserDetails } from "@/providers/userDetails";
+import { permanentRedirect } from "next/navigation";
+
 
 //Import Needed Components
 import Header from "@/components/DashboardComponents/Header";
 import DepositInfo from "@/components/DepositComponents/DepositInfo";
 import SmallScreenAccount from "@/components/DashboardComponents/SmallScreenAccount";
 
+
 const page = async () => {
 
     const { user } = await getUserDetails();
+
+    if (user?.isSuspended){
+        permanentRedirect('/suspend') 
+     }
 
     return ( 
         <main>

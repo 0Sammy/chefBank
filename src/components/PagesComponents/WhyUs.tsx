@@ -5,7 +5,7 @@ const WhyUs = () => {
     return ( 
         <main className="inter bg-[#FBF1EC] py-14 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-xs md:text-sm xl:text-base">
             <div className="text-center">
-               <p className="text-primary text-sm md:text-base xl:text-lg font-semibold">Why Capital Sphere Bank?</p>
+               <p className="text-primary text-sm md:text-base xl:text-lg font-semibold">Why Keystone National Bank?</p>
                 <p className="text-3xl md:text-4xl xl:text-5xl font-bold mt-2 text-[#161618]">The only bank <br />you&apos;ll ever need</p>
                 <p className="text-[#56575C] font-semibold mt-4">Our online banking platform is user-friendly and easy to navigate.</p> 
             </div>

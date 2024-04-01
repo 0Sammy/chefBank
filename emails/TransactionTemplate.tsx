@@ -28,7 +28,7 @@ export default function TransactionTemplate({
           <Container>
             <img
               src="https://res.cloudinary.com/dpmx02shl/image/upload/v1706006755/logo_bxjctk.png"
-              alt="Capital Sphere Logo"
+              alt="Keystone National Bank Logo"
             />
           </Container>
           <Text style={bold}>Hi {userName}!</Text>
@@ -59,7 +59,7 @@ export default function TransactionTemplate({
             future banking needs.
           </Text>
           <Container style={footer}>
-            <Text>&copy; Capital Sphere Bank 2024</Text>
+            <Text>&copy; Keystone National Bank 2024</Text>
           </Container>
         </Container>
       </Section>

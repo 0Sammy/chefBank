@@ -33,7 +33,7 @@ const Herosection = () => {
                 <Image src={heroUserImg} alt="User Image" className='rounded-[50%]'/>
                 <div className='flex flex-col gap-y-2 text-left'>
                     <p className='text-[10px] md:text-xs text-[#161618] font-medium'>Danillo Barros</p>
-                    <p className='text-[10px] md:text-xs text-[#9EA0A3]'>CSB online banking is fantastic, and their customer service is top-notch. Highly recommended!</p>
+                    <p className='text-[10px] md:text-xs text-[#9EA0A3]'>KNB online banking is fantastic, and their customer service is top-notch. Highly recommended!</p>
                 </div>
                 <div className='flex gap-x-1'>
                     <p className='text-[10px] md:text-xs text-[#161618] font-medium'>5</p>
@@ -48,7 +48,7 @@ const Herosection = () => {
                 <Image src={heroUserImg1} alt="User Image" className='rounded-[50%]'/>
                 <div className='flex flex-col gap-y-2 text-left'>
                     <p className='text-[10px] md:text-xs text-[#161618] font-medium'>Marco Brewster</p>
-                    <p className='text-[10px] md:text-xs text-[#9EA0A3]'>CSB online banking is a breeze! Fantastic customer service too!</p>
+                    <p className='text-[10px] md:text-xs text-[#9EA0A3]'>KNB online banking is a breeze! Fantastic customer service too!</p>
                 </div>
                 <div className='flex gap-x-1'>
                     <p className='text-[10px] md:text-xs text-[#161618] font-medium'>5</p>

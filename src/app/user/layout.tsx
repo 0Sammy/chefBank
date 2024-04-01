@@ -25,19 +25,23 @@ export default async function UserLayout({
 
       permanentRedirect('/onboarding/verification')
 
-    } else if (currentUser?.hasTransactionPin === false){
+    } 
+    if (currentUser?.hasTransactionPin === false){
 
       permanentRedirect('/onboarding/transaction')
 
-    } else if (currentUser?.isVerified === false) {
+    } 
+    if (currentUser?.isVerified === false) {
 
       permanentRedirect('/onboarding/review')
 
-    } else if (currentUser?.isSuspended === true) {
+    } 
+    if (currentUser?.isSuspended === true) {
 
-      permanentRedirect('/user/suspend')
+      permanentRedirect('/suspend')
 
     }
+
   return (
 
       <section>

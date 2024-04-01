@@ -3,7 +3,7 @@ import SecondCard from "./SecondCard";
 const Second = () => {
     return ( 
         <main className="inter bg-[#FBF1EC] md:rounded-[3rem] rounded-[2rem] -mt-[10rem] sm:-mt-[12rem] md:-mt-[14rem] lg:-mt-[16rem] xl:-mt-[18rem] 2xl:-mt-[20rem] py-14 relative z-10 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-            <p className="text-primary text-sm md:text-base xl:text-lg font-semibold ">Why Capital Sphere Bank?</p>
+            <p className="text-primary text-sm md:text-base xl:text-lg font-semibold ">Why Keystone National Bank?</p>
             <p className="text-3xl md:text-4xl xl:text-5xl font-bold mt-2 text-[#161618]">Built for Your Convenience</p>
             <p className="mt-8 w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] text-[#56575C] text-sm sm:text-base md:text-lg xl:text-xl">Explore the unique advantages of our online services and discover how we go beyond traditional banking to meet your modern needs.</p>
             <div className="flex justify-center flex-wrap gap-5 xl:gap-10 mt-14">
