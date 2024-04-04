@@ -29,10 +29,10 @@ const Sidebar = ({role} : {role : string | any}) => {
     <main className="relative">
       <div className="fixed left-0 top-0 z-50 hidden h-screen w-80 bg-sidebar lg:block rounded-r-[2.5rem]">
                 <div className="flex gap-x-1 w-fit ml-8 mt-4">
-                    <Image src={logo} alt="Capital Sphere Bank Logo" priority={true}/>
-                    <div className="text-textWhite  text-xs sm:text-sm xl:text-base">
-                        <p>Capital</p>
-                        <p className="-mt-2">Sphere</p>
+                    <Image src={logo} alt="Keystone National Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/>
+                    <div className="text-textWhite  text-xs sm:text-sm xl:text-base -mt-1">
+                        <p>Keystone</p>
+                        <p className="-mt-2">National</p>
                         <p className="-mt-2">Bank</p>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ const Sidebar = ({role} : {role : string | any}) => {
               initial={{ x: "-100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "-100%", opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className="fixed left-0 top-0 z-50 h-screen w-80 bg-sidebar lg:hidden rounded-r-lg"
             >
             <AiOutlineCloseSquare

@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
         const editCurrency = await prisma.utility.update({
             where : {
-                id : "65ceca5cd9a2893a72631142",
+                id : "660e3a25d412b09fd622ce60",
             },
             data : {
                 currentCurrency: currency
