@@ -31,7 +31,7 @@ model User {
   idCardBackImgSrc            String
   accountNumber               String        @unique
   transactions                Transaction[]
-  currency                    String?       @default("€")
+  currency                    String?       @default("$")
   atmRequest                  Boolean       @default(false)
   transactionPin              String?
   hasTransactionPin           Boolean       @default(false)

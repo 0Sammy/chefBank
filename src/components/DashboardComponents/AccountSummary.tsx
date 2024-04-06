@@ -27,7 +27,7 @@ const AccountSummary = ({accountNumber, firstName, lastName} : string | any) => 
       };
       const handleIbanClick = async () => {
         try {
-          await navigator.clipboard.writeText(`DE81 3704 0044 ${accountNumber}`);
+          await navigator.clipboard.writeText(`3704 00448 ${accountNumber}`);
           setIsIban(true);
           toast.success("IBAN copied to clipboard")
         } catch (err) {
@@ -38,13 +38,13 @@ const AccountSummary = ({accountNumber, firstName, lastName} : string | any) => 
     return ( 
         <main className="hidden lg:block border border-[#7676801F] rounded-xl px-3 md:px-4 xl:px-6 py-6">
             <div className="flex gap-x-3 items-center">
-                <Image src={logo} alt="logo"/>
-                <p className="text-sm xl:text-base text-secondary font-semibold">Capital sphere bank</p>
+                <Image src={logo} alt="logo" className="size-9 sm:size-12 xl:size-14"/>
+                <p className="text-sm xl:text-base text-secondary font-semibold">Keystone National bank</p>
             </div>
             <div className="flex flex-col gap-y-3 mt-10">
                 <div className="flex flex-col gap-y-1">
                     <p className="text-[8px] md:text-[10px] xl:text-[12px] text-[#9EA0A3]">Account type</p>
-                    <p className="text-[10px] md:text-[12px] xl:text-[14px] text-[#06121B] font-medium">Capital Savings</p>
+                    <p className="text-[10px] md:text-[12px] xl:text-[14px] text-[#06121B] font-medium">Keystone Savings</p>
                 </div>
                 <div className="flex flex-col gap-y-1">
                     <p className="text-[8px] md:text-[10px] xl:text-[12px] text-[#9EA0A3]">Account holder</p>
@@ -60,7 +60,7 @@ const AccountSummary = ({accountNumber, firstName, lastName} : string | any) => 
                 <div className="flex items-center justify-between text-[#06121B]">
                     <div className="flex flex-col gap-y-1">
                         <p className="text-[8px] md:text-[10px] xl:text-[12px] text-[#9EA0A3]">IBAN</p>
-                        <p className="text-[10px] md:text-[12px] xl:text-[14px] font-medium">DE81 3704 0044 {accountNumber}</p>
+                        <p className="text-[10px] md:text-[12px] xl:text-[14px] font-medium">3704 00448 {accountNumber}</p>
                     </div>
                     {isIban ? <CopySuccess size={18} className="cursor-pointer text-opacity-50" onClick={handleIbanClick} /> : <Copy size={18} className={`cursor-pointer`} onClick={handleIbanClick}/>}
                 </div>
