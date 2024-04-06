@@ -68,11 +68,11 @@ const VerificationForm = () => {
   return (
     <main>
       <div className="flex gap-x-1">
-        <Image src={logo} alt="Capital Sphere Bank Logo" priority={true} />
+        <Image src={logo} alt="Keystone National Bank Logo" priority={true} className="size-9 sm:size-12 xl:size-14"/>
         <div className="text-[#1C1F33] font-semibold text-xs sm:text-sm xl:text-base">
-          <p>Capital</p>
-          <p className="-mt-1">Sphere</p>
-          <p className="-mt-1">Bank</p>
+          <p>Keystone</p>
+          <p className="-mt-[0.3rem]">National</p>
+          <p className="-mt-[0.3rem]">Bank</p>
         </div>
       </div>
       <div className="text-[#161618] mt-10 mb-4">
