@@ -86,7 +86,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                 Amount 
             </p>
             <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
-              {currentCurrency ?? "€"}{currentTransaction?.amount}
+              {currentCurrency ?? "$"}{currentTransaction?.amount}
             </p>
         </div> 
         <div className="flex justify-between items-center gap-x-5">
@@ -133,10 +133,26 @@ const page = async ({ params }: { params: { id: string } }) => {
             </div> 
             <div className="flex justify-between items-center gap-x-5">
                 <p className="text-[#9EA0A3] text-xs md:text-sm">
+                    Recipient Bank Address 
+                </p>
+                <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
+                  {currentTransaction.bankAddress}
+                </p>
+            </div> 
+            <div className="flex justify-between items-center gap-x-5">
+                <p className="text-[#9EA0A3] text-xs md:text-sm">
+                    Routing Number
+                </p>
+                <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
+                  {currentTransaction.routingNumber}
+                </p>
+            </div> 
+            <div className="flex justify-between items-center gap-x-5">
+                <p className="text-[#9EA0A3] text-xs md:text-sm">
                     Transaction Fee 
                 </p>
                 <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
-                    {currentCurrency ?? "€"}{currentTransaction.transferFee}
+                    {currentCurrency ?? "$"}{currentTransaction.transferFee}
                 </p>
             </div>
         </>

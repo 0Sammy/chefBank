@@ -13,6 +13,8 @@ const Transfer = () => {
     accountName,
     accountNumber,
     bankName,
+    routingNumber,
+    bankAddress,
     swiftCode,
     description,
     iban,
@@ -22,6 +24,8 @@ const Transfer = () => {
     updateAccountNumber,
     updateDepositMethod,
     updateBankName,
+    updateRoutingNumber,
+    updateBankAddress,
     updateSwiftCode,
     updateDescription,
     updateIban,
@@ -146,6 +150,44 @@ const Transfer = () => {
                 type="text"
                 name="accountName"
                 id="accountName"
+                className="border border-[#E6E7E8] px-2 xl:px-4 py-2 md:py-3 focus:border-primary rounded-md focus:outline-none placeholder:text-xs xl:placeholder:text-sm placeholder:text-[#9EA0A3]"
+              />
+            </div>
+            <div className="flex flex-col gap-y-1 mt-4">
+              <label
+                htmlFor="routingNumber"
+                className="text-sm lg:text-base text-[#06121B] font-semibold cursor-pointer"
+              >
+                Routing number
+              </label>
+              <input
+                value={routingNumber}
+                onChange={(e: any) => updateRoutingNumber(e.target.value)}
+                required
+                placeholder="123456789"
+                type="text"
+                pattern="\d{9}"
+                title="Please enter exactly 9 digits"
+                name="routingNumber"
+                id="routingNumber"
+                className="border border-[#E6E7E8] px-2 xl:px-4 py-2 md:py-3 focus:border-primary rounded-md focus:outline-none placeholder:text-xs xl:placeholder:text-sm placeholder:text-[#9EA0A3]"
+              />
+            </div>
+            <div className="flex flex-col gap-y-1 mt-4">
+              <label
+                htmlFor="bankAddress"
+                className="text-sm lg:text-base text-[#06121B] font-semibold cursor-pointer"
+              >
+                Bank address
+              </label>
+              <input
+                value={bankAddress}
+                onChange={(e: any) => updateBankAddress(e.target.value)}
+                required
+                placeholder="100 Main Street Any town, USA 12345"
+                type="text"
+                name="bankAddress"
+                id="bankAddress"
                 className="border border-[#E6E7E8] px-2 xl:px-4 py-2 md:py-3 focus:border-primary rounded-md focus:outline-none placeholder:text-xs xl:placeholder:text-sm placeholder:text-[#9EA0A3]"
               />
             </div>

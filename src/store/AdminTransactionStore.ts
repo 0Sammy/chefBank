@@ -6,6 +6,8 @@ type transactionStore = {
   accountNumber: string;
   depositMethod: string;
   bankName: string;
+  routingNumber: string;
+  bankAddress: string;
   swiftCode: string;
   description: string;
   iban: string;
@@ -19,6 +21,8 @@ type transactionStore = {
   updateAccountNumber: (newAccountNumber: string) => void;
   updateDepositMethod: (newMethod: string) => void;
   updateBankName: (newName: string) => void;
+  updateRoutingNumber: (newNumber: string) => void;
+  updateBankAddress: (newAddress: string) => void;
   updateSwiftCode: (newCode: string) => void;
   updateDescription: (newDescription: string) => void;
   updateIban: (newIban: string) => void;
@@ -35,6 +39,8 @@ export const useTransactionStore = create<transactionStore>((set) => ({
   accountNumber: "",
   depositMethod: "",
   bankName: "",
+  routingNumber: "",
+  bankAddress: "",
   swiftCode: "",
   description: "",
   iban: "",
@@ -49,6 +55,8 @@ export const useTransactionStore = create<transactionStore>((set) => ({
     set({ accountNumber: newAccountNumber }),
   updateDepositMethod: (newMethod: string) => set({ depositMethod: newMethod }),
   updateBankName: (newName: string) => set({ bankName: newName }),
+  updateRoutingNumber: (newRoutingNumber: string) => set({ routingNumber: newRoutingNumber }),
+  updateBankAddress: (newAddress: string) => set({ bankAddress: newAddress }),
   updateSwiftCode: (newCode: string) => set({ swiftCode: newCode }),
   updateDescription: (newDescription: string) =>
     set({ description: newDescription }),
@@ -64,6 +72,8 @@ export const useTransactionStore = create<transactionStore>((set) => ({
       accountNumber: "",
       depositMethod: "",
       bankName: "",
+      routingNumber: "",
+      bankAddress: "",
       swiftCode: "",
       description: "",
       iban: "",

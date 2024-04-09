@@ -87,7 +87,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                 Amount 
             </p>
             <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
-              {currentCurrency ?? "€"}{transactionInformation?.amount.toLocaleString()}
+              {currentCurrency ?? "$"}{transactionInformation?.amount.toLocaleString()}
             </p>
         </div> 
         {(transactionInformation?.type === "Domestic_Wire_Transfer" || transactionInformation?.type === "International_Wire_Transfer") && 
@@ -118,10 +118,26 @@ const page = async ({ params }: { params: { id: string } }) => {
             </div> 
             <div className="flex justify-between items-center gap-x-5">
                 <p className="text-[#9EA0A3] text-xs md:text-sm">
+                    Recipient Bank Address 
+                </p>
+                <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
+                  {transactionInformation.bankAddress}
+                </p>
+            </div> 
+            <div className="flex justify-between items-center gap-x-5">
+                <p className="text-[#9EA0A3] text-xs md:text-sm">
+                    Routing Number 
+                </p>
+                <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
+                  {transactionInformation.routingNumber}
+                </p>
+            </div>
+            <div className="flex justify-between items-center gap-x-5">
+                <p className="text-[#9EA0A3] text-xs md:text-sm">
                     Transaction Fee 
                 </p>
                 <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
-                  {currentCurrency ?? "€"}{transactionInformation.transferFee}
+                  {currentCurrency ?? "$"}{transactionInformation.transferFee}
                 </p>
             </div>
         </>

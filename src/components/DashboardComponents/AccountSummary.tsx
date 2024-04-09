@@ -59,8 +59,8 @@ const AccountSummary = ({accountNumber, firstName, lastName} : string | any) => 
                 </div>
                 <div className="flex items-center justify-between text-[#06121B]">
                     <div className="flex flex-col gap-y-1">
-                        <p className="text-[8px] md:text-[10px] xl:text-[12px] text-[#9EA0A3]">IBAN</p>
-                        <p className="text-[10px] md:text-[12px] xl:text-[14px] font-medium">3704 00448 {accountNumber}</p>
+                        <p className="text-[8px] md:text-[10px] xl:text-[12px] text-[#9EA0A3]">Routing Number</p>
+                        <p className="text-[10px] md:text-[12px] xl:text-[14px] font-medium">3704 00448</p>
                     </div>
                     {isIban ? <CopySuccess size={18} className="cursor-pointer text-opacity-50" onClick={handleIbanClick} /> : <Copy size={18} className={`cursor-pointer`} onClick={handleIbanClick}/>}
                 </div>

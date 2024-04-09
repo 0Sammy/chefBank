@@ -30,6 +30,8 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
     accountNumber,
     depositMethod,
     bankName,
+    routingNumber,
+    bankAddress,
     swiftCode,
     description,
     iban,
@@ -45,6 +47,8 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
     updateAccountNumber,
     updateDepositMethod,
     updateBankName,
+    updateRoutingNumber,
+    updateBankAddress,
     updateSwiftCode,
     updateDescription,
     updateIban,
@@ -194,17 +198,12 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
           depositMethod !== "Utility_Bill" && (
             <div className="flex flex-col gap-y-4 mt-4">
               <div className="flex flex-col gap-y-1">
-                <label
-                  htmlFor="accountNumber"
-                  className="text-sm lg:text-base text-[#06121B] cursor-pointer"
-                >
+                <label htmlFor="accountNumber" className="text-sm lg:text-base text-[#06121B] cursor-pointer">
                   Account number
                 </label>
                 <input
                   value={accountNumber}
-                  onChange={(e) => {
-                    updateAccountNumber(e.target.value);
-                  }}
+                  onChange={(e) => { updateAccountNumber(e.target.value) }}
                   required
                   placeholder="0930202020"
                   pattern="\d{10}"
@@ -217,10 +216,7 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
                 />
               </div>
               <div className="flex flex-col gap-y-1">
-                <label
-                  htmlFor="accountName"
-                  className="text-sm lg:text-base text-[#06121B] cursor-pointer"
-                >
+                <label htmlFor="accountName" className="text-sm lg:text-base text-[#06121B] cursor-pointer">
                   Account name
                 </label>
                 <input
@@ -231,6 +227,38 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
                   type="text"
                   name="accountName"
                   id="accountName"
+                  className="border border-[#E6E7E8] px-2 xl:px-4 py-2 md:py-3 focus:border-primary rounded-md focus:outline-none placeholder:text-xs xl:placeholder:text-sm placeholder:text-[#9EA0A3]"
+                />
+              </div>
+              <div className="flex flex-col gap-y-1">
+                <label htmlFor="routingNumber" className="text-sm lg:text-base text-[#06121B] cursor-pointer">
+                  Bank Address
+                </label>
+                <input
+                  value={routingNumber}
+                  onChange={(e: any) => updateRoutingNumber(e.target.value)}
+                  required
+                  placeholder="123456789"
+                  type="text"
+                  pattern="\d{9}"
+                  title="Please enter exactly 9 digits"
+                  name="routingNumber"
+                  id="routingNumber"
+                  className="border border-[#E6E7E8] px-2 xl:px-4 py-2 md:py-3 focus:border-primary rounded-md focus:outline-none placeholder:text-xs xl:placeholder:text-sm placeholder:text-[#9EA0A3]"
+                />
+              </div>
+              <div className="flex flex-col gap-y-1">
+                <label htmlFor="bankAddress" className="text-sm lg:text-base text-[#06121B] cursor-pointer">
+                  Bank Address
+                </label>
+                <input
+                  value={bankAddress}
+                  onChange={(e: any) => updateBankAddress(e.target.value)}
+                  required
+                  placeholder="100 Main Street Any town, USA 12345"
+                  type="text"
+                  name="bankAddress"
+                  id="bankAddress"
                   className="border border-[#E6E7E8] px-2 xl:px-4 py-2 md:py-3 focus:border-primary rounded-md focus:outline-none placeholder:text-xs xl:placeholder:text-sm placeholder:text-[#9EA0A3]"
                 />
               </div>

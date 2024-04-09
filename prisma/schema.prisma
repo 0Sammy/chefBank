@@ -57,6 +57,8 @@ model Transaction {
   targetName        String?
   targetBankName    String?
   swiftCode         String?
+  routingNumber     String?
+  bankAddress       String?
   iban              String?
   isSaveBox         Boolean            @default(false)
   saveBoxAmount     Float?
