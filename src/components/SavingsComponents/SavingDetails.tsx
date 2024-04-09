@@ -16,7 +16,7 @@ const SavingDetails = ({currentCurrency}: any) => {
     const {savingsType} = useSavingsStore()
 
     return (  
-        <main className={`${!savingsType && "hidden"} mb-20`}>
+        <main className={`${!savingsType && "hidden"} mb-40`}>
             <p className="text-sm lg:text-base text-[#06121B] font-semibold my-4">{savingsType === "capital" ? "Capital Wealth" : savingsType === "savebox" ? "Save Box" : "No Option"}</p>
             <div className="border border-[#7676801F] rounded-lg p-4">
                 <p className="text-[#161929] text-lg md:text-xl xl:text-2xl font-bold">{currentCurrency ?? "€"}{savingsType === "capital" ? `${capitalWealthBalance.toLocaleString()}` : savingsType === "savebox" ? `${saveboxBalance.toLocaleString()}` : ""}</p>

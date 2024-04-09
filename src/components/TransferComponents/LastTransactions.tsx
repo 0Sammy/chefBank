@@ -9,7 +9,7 @@ import { ArrowRight2, Bill, WalletMoney } from "iconsax-react";
 
 const LastTransactions = ({transactions}: any) => {
     return ( 
-        <main className="text-xs md:text-sm xl:text-base mb-20 lg:mb-0">
+        <main className="text-xs md:text-sm xl:text-base mb-40 lg:mb-0">
             <p className="text-sm lg:text-base text-[#06121B] font-semibold mb-4">Recent Transactions</p>
             <div className="flex gap-x-10 bg-[#EBEBF52E] border border-[#7676801F] px-8 py-6 mt-5 rounded-lg overflow-x-auto special">
                 {transactions && transactions.map((transaction: any) => ( 
