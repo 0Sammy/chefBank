@@ -3,7 +3,6 @@ import Image from "next/image";
 import getIndividualUser from "@/actions/getIndividualUser";
 import getIndividualUserTransaction from "@/actions/getIndividualUserTransaction";
 import { formatDate, formatDateTime } from "@/lib/dateTimeUtils";
-import getCurrency from "@/actions/getCurrency";
 import Link from "next/link";
 
 //Import Needed Components
@@ -285,7 +284,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                   Current Balance
                 </p>
                 <p className="text-[#D56F3E] text-lg md:text-xl lg:text-2xl font-semibold">
-                  {currentCurrency ?? "€"}{mainBalance.toLocaleString()}
+                  {currentCurrency ?? "$"}{mainBalance.toLocaleString()}
                 </p>
               </div>
               <div className="flex flex-col gap-y-1">
@@ -293,7 +292,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                   Savings
                 </p>
                 <p className="text-[#34C759] text-lg md:text-xl lg:text-2xl font-semibold">
-                  +{currentCurrency ?? "€"}{totalSavings.toLocaleString()}
+                  +{currentCurrency ?? "$"}{totalSavings.toLocaleString()}
                 </p>
               </div>
             </div>
@@ -373,7 +372,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                         </p>
                         <p className="text-[#9EA0A3] text-[0.6rem] xl:text-xs">
                           {transaction.doneByAdmin
-                            ? formatDate(transaction.customCreatedTime)
+                            ? formatDateTime(transaction.customCreatedTime)
                             : formatDate(transaction.createdAt)}
                           .
                         </p>
@@ -387,8 +386,8 @@ const page = async ({ params }: { params: { id: string } }) => {
                       } text-xs md:text-sm xl:text-base font-medium`}
                     >
                       {transaction.type === "Deposit"
-                        ? `+${currentCurrency ?? "€"}${transaction.amount}`
-                        : `-${currentCurrency ?? "€"}${transaction.amount}`}
+                        ? `+${currentCurrency ?? "$"}${transaction.amount}`
+                        : `-${currentCurrency ?? "$"}${transaction.amount}`}
                     </p>
                   </div>
                 </Link>
