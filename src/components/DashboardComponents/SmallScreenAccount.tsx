@@ -36,7 +36,7 @@ const SmallScreenAccount = ({accountNumber, firstName, lastName}: smallScreenAcc
         <main className="bg-[#EBEBF52E] border border-[#7676801F] h-28 rounded-lg p-4 mt-4">
             <p className="text-secondary text-xs sm:text-sm md:text-base capitalize font-medium">{firstName} {lastName}</p>
             <div className="flex justify-between mt-2 items-center">
-                <p className="text-xs md:text-sm text-[#8E8E93]">Capital savings account</p>
+                <p className="text-xs md:text-sm text-[#8E8E93]">Keystone savings account</p>
                 <div className="flex items-center gap-x-1">
                     <p className="text-xs sm:text-sm md:text-base font-medium text-[#8E8E93]">{accountNumber}</p>
                     {isCopied ? <CopySuccess size={18} className="cursor-pointer text-opacity-50 text-primary" onClick={handleCopyClick} /> : <Copy size={18} className={`cursor-pointer text-primary`} onClick={handleCopyClick}/>}
@@ -44,9 +44,9 @@ const SmallScreenAccount = ({accountNumber, firstName, lastName}: smallScreenAcc
                 </div>
             </div>
             <div className="flex justify-between mt-2 items-center">
-                <p className="text-xs md:text-sm text-[#8E8E93]">IBAN</p>
+                <p className="text-xs md:text-sm text-[#8E8E93]">Routing Number</p>
                 <div className="flex items-center gap-x-1">
-                    <p className="text-xs sm:text-sm md:text-base font-medium text-[#8E8E93]">DE81 3704 0044 {accountNumber}</p>
+                    <p className="text-xs sm:text-sm md:text-base font-medium text-[#8E8E93]">3704 00448</p>
                     {isIban ? <CopySuccess size={18} className="cursor-pointer text-opacity-50 text-primary" onClick={handleIbanClick} /> : <Copy size={18} className={`cursor-pointer text-primary`} onClick={handleIbanClick}/>}
                     
                 </div>

@@ -13,14 +13,32 @@ import BalanceUpdate from "@/components/DashboardComponents/BalanceUpdate";
 
 
 
-export const revalidate = 30
+export const revalidate = 1
 const page = async () => {
-
+    //Needed Functions
+    function sortByCustomDateOrCreatedAt(transactions: any) {
+        // Sort transactions by custom date or createdAt
+        return transactions.sort((a: { customCreatedTime: string | number | Date; createdAt: string | number | Date; }, b: { customCreatedTime: string | number | Date; createdAt: string | number | Date; }) => {
+            // Check if both transactions have customCreatedTime
+            if (a.customCreatedTime && b.customCreatedTime) {
+                // Sort by customCreatedTime if available
+                return new Date(b.customCreatedTime).getTime() - new Date(a.customCreatedTime).getTime();
+            } else if (!a.customCreatedTime && !b.customCreatedTime) {
+                // If both transactions don't have customCreatedTime, fall back to sorting by createdAt
+                return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+            } else {
+                // If only one transaction has customCreatedTime, prioritize it
+                return a.customCreatedTime ? -1 : 1;
+            }
+        });
+    }
+    
     const { user } = await getUserDetails();
-    const transactions = user?.transactions
-    const lastFiveTransactions = transactions?.slice(-5);
-    const wireTransferTransactions = transactions?.filter((transaction) => transaction.type.includes('Wire_Transfer'));
-    const deposits = transactions?.filter((transaction) => transaction.type === "Deposit");
+    const allTransactions = user?.transactions
+    const transactions = sortByCustomDateOrCreatedAt(allTransactions)
+    const lastFiveTransactions = transactions?.slice(0, 5);
+    const wireTransferTransactions = transactions?.filter((transaction: { type: string | string[]; }) => transaction.type.includes('Wire_Transfer'));
+    const deposits = transactions?.filter((transaction: { type: string; }) => transaction.type === "Deposit");
     const currentCurrency = user?.currency
 
     if (user?.isSuspended){

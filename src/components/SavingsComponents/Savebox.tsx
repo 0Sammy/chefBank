@@ -6,6 +6,7 @@ const Savebox = ({currentCurrency}: any) => {
 
     const { savingsType, updateSavingsType } = useSavingsStore() 
     const { saveboxBalance } = useBalanceStore()
+    
      //Function
      const handleSavingsUpdate = () => {
         updateSavingsType("savebox")
