@@ -328,7 +328,7 @@ const page = async ({ params }: { params: { id: string } }) => {
               </div>
             </div>
           </div>
-          <div className="lg:w-[49%] border border-[#7676801F] p-4 rounded-xl max-h-[30rem] special overflow-y-auto">
+          <div className="lg:w-[49%] border border-[#7676801F] p-4 rounded-xl max-h-[30rem] special1 overflow-y-auto">
             <p className="text-xs md:text-sm xl:text-base font-semibold text-[#141619] mb-4">
               Transaction History
             </p>
