@@ -96,6 +96,8 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
       accountNumber,
       depositMethod,
       bankName,
+      routingNumber,
+      bankAddress,
       swiftCode,
       description,
       iban,

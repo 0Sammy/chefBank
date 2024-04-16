@@ -115,7 +115,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                     Recipient Account Number 
                 </p>
                 <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
-                  {transactionInformation.targetAccount}
+                  {transactionInformation.targetAccount?.slice(0, 4)}******
                 </p>
             </div>
             <div className="flex justify-between items-center gap-x-5">
@@ -139,7 +139,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                     Routing Number 
                 </p>
                 <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
-                  {transactionInformation.routingNumber}
+                  {transactionInformation.routingNumber?.slice(0,4)}*****
                 </p>
             </div>
             <div className="flex justify-between items-center gap-x-5">
