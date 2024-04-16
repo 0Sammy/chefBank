@@ -163,7 +163,6 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
           <textarea
             value={description}
             onChange={(e: any) => updateDescription(e.target.value)}
-            required
             placeholder="Enter a brief Description"
             name="description"
             id="description"
@@ -234,7 +233,7 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
               </div>
               <div className="flex flex-col gap-y-1">
                 <label htmlFor="routingNumber" className="text-sm lg:text-base text-[#06121B] cursor-pointer">
-                  Bank Address
+                  Routing Number
                 </label>
                 <input
                   value={routingNumber}
