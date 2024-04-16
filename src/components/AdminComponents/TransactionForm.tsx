@@ -115,6 +115,7 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
         setLoading(false);
         toast.success("Transaction was added successfully");
         reset();
+        window.location.reload()
       },
       onError: (error: any) => {
         // Handle error
@@ -124,6 +125,7 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
         }
         toast.error("Unable to add transaction now, please try again later.");
         reset();
+        window.location.reload()
       },
     });
   };
