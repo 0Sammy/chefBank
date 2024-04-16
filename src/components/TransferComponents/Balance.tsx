@@ -17,7 +17,7 @@ const Balance = ({currentCurrency}: any) => {
     <main className="bg-secondary border border-[#7878805C] p-4 rounded-xl">
       <p className="text-[#E8E9EB] text-[0.6rem] md:text-xs">Current balance</p>
       <div className="flex justify-between items-center mt-4">
-        <p className="text-lg md:text-xl xl:text-2xl text-[#DD8C65] font-semibold">{currentCurrency ?? "€"}{showBalance ? `${mainBalance.toLocaleString()}.00` : "*".repeat(mainBalance.toString().length)}</p>
+        <p className="text-lg md:text-xl xl:text-2xl text-[#DD8C65] font-semibold">{currentCurrency ?? "€"}{showBalance ? `${mainBalance.toLocaleString()}` : "*".repeat(mainBalance.toString().length)}</p>
         {showBalance ? (
           <EyeSlash
             size="20"

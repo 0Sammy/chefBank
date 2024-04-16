@@ -19,7 +19,7 @@ const AccountDetails = ({currentCurrency}: any) => {
       <p className="text-[#E8E9EB] text-[0.6rem] md:text-xs">Current balance</p>
       <div className="flex justify-between items-center">
         <p className="text-2xl md:text-3xl xl:text-[32px] text-[#E39F7E] font-semibold">
-          {currentCurrency ?? "€"}{showBalance ? `${mainBalance.toLocaleString()}.00` : "*".repeat(mainBalance.toString().length)}
+          {currentCurrency ?? "€"}{showBalance ? `${mainBalance.toLocaleString()}` : "*".repeat(mainBalance.toString().length)}
         </p>
         {showBalance ? (
           <EyeSlash

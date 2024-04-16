@@ -21,6 +21,7 @@ const DeleteTransactionButton = ({id}: string | any) => {
               toast.success("Transaction was deleted successfully.")
               setLoading(false)
               setDeleted(true)
+              window.location.reload()
             },
             onError: (error: any) => {
               // Handle error
