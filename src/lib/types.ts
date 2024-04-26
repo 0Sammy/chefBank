@@ -8,7 +8,6 @@ export type ID = {
   idType : string
 }
 
-//General Types
 
 
 //User Dashboard Types
