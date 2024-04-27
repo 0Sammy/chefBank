@@ -209,9 +209,9 @@ const TransactionForm = ({ allUsers, loggedInEmail }: transactionProps) => {
                   onChange={(e) => { updateAccountNumber(e.target.value) }}
                   required
                   placeholder="0930202020"
-                  pattern="\d{10}"
+                  pattern="\d*"
                   type="text"
-                  title="Please enter a 10 digit account number"
+                  title="Please enter the account number (Digits Only)"
                   name="accountNumber"
                   id="accountNumber"
                   max={10}

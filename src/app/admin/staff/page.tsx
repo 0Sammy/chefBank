@@ -6,7 +6,7 @@ import getCurrency from "@/actions/getCurrency";
 import AllAdmins from "@/components/AdminComponents/AllAdmins";
 import Header from "@/components/AdminComponents/Header";
 
-
+export const revalidate = 1
 const page = async () => {
 
     const admins = await getAdmins()

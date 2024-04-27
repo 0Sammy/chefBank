@@ -5,7 +5,7 @@ import getIndividualTransaction from "@/actions/getIndividualTransaction";
 import { getUserDetails } from "@/providers/userDetails";
 
 //Import Icons
-import { AddCircle, Discover } from "iconsax-react";
+import { AddCircle } from "iconsax-react";
 
 
 
