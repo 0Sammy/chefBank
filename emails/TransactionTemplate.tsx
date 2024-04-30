@@ -27,7 +27,8 @@ export default function TransactionTemplate({
         <Container style={container}>
           <Container>
             <img
-              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1706006755/logo_bxjctk.png"
+              style={image}
+              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
               alt="Keystone National Bank Logo"
             />
           </Container>
@@ -116,3 +117,7 @@ const footer = {
   borderTop: "1px solid #B2B3BA",
   paddingTop: "1rem",
 };
+
+const image = {
+  width: "30px"
+}

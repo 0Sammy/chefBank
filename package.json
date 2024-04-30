@@ -24,6 +24,7 @@
     "cloudinary": "^1.41.3",
     "framer-motion": "^10.18.0",
     "iconsax-react": "^0.0.8",
+    "jspdf": "^2.5.1",
     "next": "14.0.4",
     "next-auth": "^4.24.5",
     "next-cloudinary": "^5.20.0",

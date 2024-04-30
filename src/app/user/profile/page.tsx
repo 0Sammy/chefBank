@@ -8,7 +8,7 @@ import GeneralDetails from "@/components/ProfileComponents/GeneralDetails";
 import SmallScreenAccount from "@/components/DashboardComponents/SmallScreenAccount";
 
 
-export const revalidate = 1
+export const revalidate = 0
 const page = async () => {
 
     const { user } = await getUserDetails();

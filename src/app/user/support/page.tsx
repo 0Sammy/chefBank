@@ -8,7 +8,7 @@ import SupportForm from "@/components/SupportComponents/SupportForm";
 
 
 
-export const revalidate = 30
+export const revalidate = 0
 const page = async () => {
 
     const { user } = await getUserDetails();

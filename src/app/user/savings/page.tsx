@@ -15,7 +15,7 @@ import BalanceUpdate from "@/components/DashboardComponents/BalanceUpdate";
 
 
 
-export const revalidate = 1
+export const revalidate = 0
 const page = async () => {
 
     const { user } = await getUserDetails();

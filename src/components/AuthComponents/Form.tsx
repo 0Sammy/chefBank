@@ -95,7 +95,6 @@ const Form = () => {
       !email ||
       !password ||
       !dateOfBirth ||
-      !profileImgSrc ||
       !country ||
       !city ||
       !state ||

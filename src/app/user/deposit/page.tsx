@@ -7,7 +7,7 @@ import Header from "@/components/DashboardComponents/Header";
 import DepositInfo from "@/components/DepositComponents/DepositInfo";
 import SmallScreenAccount from "@/components/DashboardComponents/SmallScreenAccount";
 
-
+export const revalidate = 0
 const page = async () => {
 
     const { user } = await getUserDetails();

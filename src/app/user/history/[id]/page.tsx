@@ -1,15 +1,23 @@
 import Link from "next/link";
+import { jsPDF } from "jspdf";
+
+//Import Needed Providers
+import { getUserDetails } from "@/providers/userDetails";
+
+//Import Needed Utils
 import { formatDate } from "@/lib/dateTimeUtils";
 import { formatDateTime } from "@/lib/dateTimeUtils";
 import getIndividualTransaction from "@/actions/getIndividualTransaction";
-import { getUserDetails } from "@/providers/userDetails";
+
+//Import Needed Components
+import PDFButton from "@/components/HistoryComponents/pdfButton";
 
 //Import Icons
 import { AddCircle } from "iconsax-react";
 
 
 
-export const revalidate = 1;
+export const revalidate = 0;
 const page = async ({ params }: { params: { id: string } }) => {
   
   const transactionId = params.id;
@@ -45,7 +53,20 @@ const page = async ({ params }: { params: { id: string } }) => {
       break;
     }
   }
+  //PDF code
+  const exportPDF = () => {
+    const doc = new jsPDF();
+    doc.text("Transaction Details", 10, 10);
+    // Add transaction details to the PDF using doc.text or doc.autoTable
 
+    // Save the PDF
+    doc.save("transaction_details.pdf");
+  };
+
+  // Attach the exportPDF function to the window object
+  if (typeof window !== "undefined") {
+    (window as any).exportPDF = exportPDF;
+  }
   //console.log({transactionInformation})
 
   return (
@@ -185,6 +206,9 @@ const page = async ({ params }: { params: { id: string } }) => {
           <p className="text-[#06121B] font-medium text-sm md:text-base capitalize text-right">
             {transactionInformation?.id}
           </p>
+        </div>
+        <div className="mt-4">
+          <PDFButton clickFunction={exportPDF}/>
         </div>
       </div>
     </main>

@@ -11,27 +11,32 @@ import BalanceUpdate from "@/components/DashboardComponents/BalanceUpdate";
 
 
 
-export const revalidate = 1
+export const revalidate = 0
 const page = async () => {
     //Needed Functions
-    function sortByCustomDateOrCreatedAt(transactions: any) {
-        // Sort transactions by custom date or createdAt
+    function sortByCustomDateOrCreatedAt(transactions : any) {
         return transactions.sort((a: { customCreatedTime: string | number | Date; createdAt: string | number | Date; }, b: { customCreatedTime: string | number | Date; createdAt: string | number | Date; }) => {
-            // Check if both transactions have customCreatedTime
-            if (a.customCreatedTime && b.customCreatedTime) {
-                // Sort by customCreatedTime if available
-                return new Date(b.customCreatedTime).getTime() - new Date(a.customCreatedTime).getTime();
-            } else if (!a.customCreatedTime && !b.customCreatedTime) {
-                // If both transactions don't have customCreatedTime, fall back to sorting by createdAt
+            // Parse customCreatedTime if available
+            const dateA = a.customCreatedTime ? new Date(a.customCreatedTime) : null;
+            const dateB = b.customCreatedTime ? new Date(b.customCreatedTime) : null;
+    
+            if (!dateA && !dateB) {
+                // If neither transaction has customCreatedTime, sort by createdAt
                 return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-            } else {
-                // If only one transaction has customCreatedTime, prioritize it
-                return a.customCreatedTime ? -1 : 1;
             }
+    
+            if (dateA && dateB) {
+                // Sort by customCreatedTime if both available
+                return dateB.getTime() - dateA.getTime();
+            }
+    
+            // Place transactions without customCreatedTime at the top
+            return dateB ? 1 : 1;
         });
     }
     const { user } = await getUserDetails();
     const allTransactions = user?.transactions
+    //console.log({allTransactions})
     const transactions = sortByCustomDateOrCreatedAt(allTransactions)
     const wireTransferTransactions = transactions?.filter((transaction: { type: string | string[]; }) => transaction.type.includes('Wire_Transfer'));
     const deposits = transactions?.filter((transaction: { type: string; }) => transaction.type === "Deposit");

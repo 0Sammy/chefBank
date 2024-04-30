@@ -4,9 +4,8 @@ import Image from "next/image";
 
 //Import Needed Components
 import PersonalForm from "./PersonalForm";
+import TempProfilePic from "./TempProfilePic";
 
-//Import Needed Images
-import defaultImage from "../../../public/Images/user.png";
 
 const PersonalDetails = ({user}: any) => {
 
@@ -20,8 +19,8 @@ const PersonalDetails = ({user}: any) => {
             {seeForm && <PersonalForm hideModal={updateForm} email={user.email}/>}
             <p className="text-xl xl:text-2xl font-semibold text-[#020100]">Personal Details</p>
             <div className="flex gap-x-2 mt-4">
-                <div className="relative size-14 md:size-16 xl:size-20">
-                <Image src={(user && user?.profileImgSrc.startsWith("https://res.cloudinary.com") ? user?.profileImgSrc : defaultImage)} alt="Profile Picture" fill className="absolute rounded-[50%]"/>
+                <div className="relative size-14 md:size-16 xl:size-20 rounded-[50%]">
+                    {user && user?.profileImgSrc.startsWith("https://res.cloudinary.com") ? <Image src={user?.profileImgSrc} alt="Profile Picture" fill className="absolute rounded-[50%]"/> : <TempProfilePic firstAlphabet={user.firstName.charAt(0)} />}
                 </div>
             </div>
             <div className="flex justify-between mt-6">
