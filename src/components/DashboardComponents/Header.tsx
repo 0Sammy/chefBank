@@ -7,9 +7,6 @@ import Link from "next/link";
 //Needed Components
 import TempProfilePic from "../ProfileComponents/TempProfilePic";
 
-//Import Needed Images
-import user from "../../../public/Images/user.png"
-
 //Import Needed Icons
 import { I24Support, LogoutCurve, ProfileCircle, Refresh2 } from "iconsax-react";
 
