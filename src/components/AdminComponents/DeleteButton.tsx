@@ -10,8 +10,6 @@ type deleteProps = {
 }
 const DeleteButton = ({id, userEmail} :deleteProps) => {
 
-    const [deleted, setDeleted] = useState<boolean>(false)
-
     const onSubmit = (event: FormEvent) => {
         event.preventDefault();
         toast.info("Deleting User")
@@ -29,7 +27,7 @@ const DeleteButton = ({id, userEmail} :deleteProps) => {
               onSuccess: () => {
                 // Handle success
                 toast.success("Client was deleted successfully.")
-                setDeleted(true)
+                window.location.reload()
               },
               onError: (error: any) => {
                 // Handle error
@@ -37,7 +35,7 @@ const DeleteButton = ({id, userEmail} :deleteProps) => {
                   toast.error("Missing fields, contact the developer.")
                 }
                 toast.error("Unable to delete user now, please try again later.")
-                setDeleted(true)
+                window.location.reload()
               },
             });
             
@@ -48,12 +46,12 @@ const DeleteButton = ({id, userEmail} :deleteProps) => {
               toast.error("Missing fields, contact the developer.")
             }
             toast.error("Unable to delete clients transactions now, please try again later.")
+            window.location.reload()
           },
         });
     }
     
 
-    deleted && redirect(`/admin/users`)
 
     return ( 
         <main>
